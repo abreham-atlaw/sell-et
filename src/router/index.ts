@@ -9,6 +9,7 @@ import HomeView from '@/apps/customer/presentation/views/HomeView.vue'
 import ListProductsView from '@/apps/customer/presentation/views/ListProductsView.vue'
 import OrderProductView from '@/apps/customer/presentation/views/OrderProductView.vue'
 import OrderSuccessfullViewVue from '@/apps/customer/presentation/views/OrderSuccessfullViewVue.vue'
+import LogoutViewVue from '@/apps/auth/presentation/views/LogoutViewVue.vue'
 
 
 const router = createRouter({
@@ -23,6 +24,11 @@ const router = createRouter({
       path: "/auth/login",
       name: "login",
       component: LoginViewVue
+    },
+    {
+      path: "/auth/logout",
+      name: "login",
+      component: LogoutViewVue
     },
     {
       path: "/auth/signup/seller",

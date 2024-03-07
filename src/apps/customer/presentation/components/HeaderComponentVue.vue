@@ -17,8 +17,8 @@
         <BaseButton bg="dark">Start Shop</BaseButton>
       </a>
       <div class="text-2xl my-auto">
-        <a href="/customers/search"><i class="fa-solid fa-search ml-10"></i></a>
-        <a href="/customers/profile"><i class="fa-solid fa-user-circle ml-10"></i></a>
+        <a href="#"><i class="fa-solid fa-search ml-10"></i></a>
+        <a href="#"><i class="fa-solid fa-user-circle ml-10"></i></a>
       </div>
     </nav>
   </header>
@@ -39,7 +39,7 @@ export default defineComponent({
               {label: "Ticket", link: "/customer/list?category=ticket"},
               {label: "Donation", link: "/customer/list?category=donation"},
           ]},
-          {label: "Learn", link:"/", children: null}
+          {label: "Learn", link:"#", children: null}
       ],
     };
   },

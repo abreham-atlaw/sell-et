@@ -10,7 +10,7 @@ export default defineComponent({
             redirectionMap: new Map<AuthenticationStatus, string>([
                 [AuthenticationStatus.seller, "/seller/publish"],
                 [AuthenticationStatus.customer, "/customer/home"],
-                [AuthenticationStatus.none, "/auth/login"]
+                [AuthenticationStatus.none, "/customer/home"]
             ])
         }
     },

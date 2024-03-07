@@ -1,23 +1,28 @@
 <template>
-    <ViewModelView :state="state" :view-model="viewModel">
+    <AuthenticatedView :valid-status="[AuthenticationStatus.customer]">
 
-        <CenteredViewComponentVue>
+        <ViewModelView :state="state" :view-model="viewModel">
 
-            <div class="px-16 bg-white">
-
-                <PhysicalProductOrderComponent v-if="state.productType === ProductType.physicalProduct" :on-complete="(quantity) => {viewModel.orderPhysicalProduct(quantity)}" :state="state" :instance="(state.product! as PhysicalProduct)" :form="(state.shippingInfoForm as any)"/>
+            <CenteredViewComponentVue>
+    
+                <div class="px-16 bg-white">
+    
+                    <PhysicalProductOrderComponent v-if="state.productType === ProductType.physicalProduct" :on-complete="(quantity) => {viewModel.orderPhysicalProduct(quantity)}" :state="state" :instance="(state.product! as PhysicalProduct)" :form="(state.shippingInfoForm as any)"/>
+                    
+                    <TicketOrderComponentVue v-else-if="state.productType === ProductType.ticket" :on-complete="(pkg) => {viewModel.orderTicket(pkg)}" :state="state" :instance="(state.product! as Ticket)"/>
+                    
+                    <DigitalProductOrderComponentVue v-else-if="state.productType === ProductType.digitalProducts" :on-complete="() => {viewModel.orderDigitalProduct()}" :state="state" :instance="(state.product! as DigitalProduct)"/>
+    
+                    <DonationOrderComponent v-else :on-complete="(amount: number) => {viewModel.orderDonation(amount)}" :state="state" :instance="(state.product! as Donation)" />
+                </div>
                 
-                <TicketOrderComponentVue v-else-if="state.productType === ProductType.ticket" :on-complete="(pkg) => {viewModel.orderTicket(pkg)}" :state="state" :instance="(state.product! as Ticket)"/>
-                
-                <DigitalProductOrderComponentVue v-else-if="state.productType === ProductType.digitalProducts" :on-complete="() => {viewModel.orderDigitalProduct()}" :state="state" :instance="(state.product! as DigitalProduct)"/>
+    
+            </CenteredViewComponentVue>
+    
+        </ViewModelView>
 
-                <DonationOrderComponent v-else :on-complete="(amount: number) => {viewModel.orderDonation(amount)}" :state="state" :instance="(state.product! as Donation)" />
-            </div>
-            
-
-        </CenteredViewComponentVue>
-
-    </ViewModelView>
+    </AuthenticatedView>
+    
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
@@ -35,6 +40,8 @@ import DigitalProductOrderComponentVue from '../components/DigitalProductOrderCo
 import DonationOrderComponent from '../components/DonationOrderComponent.vue';
 import type Donation from '@/apps/seller/data/models/donation';
 import type DigitalProduct from '@/apps/seller/data/models/digitalProduct';
+import AuthenticatedView from '@/common/components/views/AuthenticatedView.vue';
+import AuthenticationStatus from '@/apps/auth/data/models/authenticationStatus';
 
 const productTypeMap = new Map([
     ["physical-product", ProductType.physicalProduct],
@@ -53,7 +60,8 @@ export default defineComponent({
         return {
             state,
             viewModel: new OrderProductViewModel(state.value as any),
-            ProductType
+            ProductType,
+            AuthenticationStatus
         }
     },
     watch:{
@@ -72,7 +80,8 @@ export default defineComponent({
         TicketOrderComponentVue,
         DigitalProductOrderComponentVue,
         DonationOrderComponent,
-        ViewModelView
+        ViewModelView,
+        AuthenticatedView
     }
 
 })

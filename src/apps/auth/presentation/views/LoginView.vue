@@ -6,6 +6,7 @@ import LabeledFieldComponent from '@/common/components/form/LabeledFieldComponen
 import TextFieldComponent from '@/common/components/form/TextFieldComponent.vue';
 import AsyncButtonVue from '@/common/components/buttons/AsyncButton.vue';
 import { AsyncStatus } from '@/common/state/baseState';
+import BaseButton from '@/common/components/buttons/BaseButton.vue';
 
 
 export default defineComponent({
@@ -20,6 +21,9 @@ export default defineComponent({
     methods: {
       login(){
         this.viewModel.login();
+      },
+      signup(){
+        this.$router.push("/auth/signup/customer");
       }
     },
     watch: {
@@ -32,18 +36,19 @@ export default defineComponent({
         deep: true
       }
     },
-    components: { LabeledFieldComponent, TextFieldComponent, AsyncButtonVue }
+    components: { LabeledFieldComponent, TextFieldComponent, AsyncButtonVue, BaseButton }
 })
 </script>
 
 <template>
   <div class="flex items-center justify-center h-screen px-6 bg-gray-200">
-    <div class="w-full max-w-sm p-6 bg-white rounded-md shadow-md">
-      <div class="flex items-center justify-center">
-        <span class="text-2xl font-semibold text-gray-700">Login</span>
+    <div class="px-16 py-28 bg-white shadow-md">
+      <div class="flex flex-col items-center justify-center">
+        <h2 class="text-2xl font-bold">Welcome Back</h2>
+        <span class="">Please login to your account</span>
       </div>
 
-      <form class="mt-4" @submit.prevent="login">
+      <form class="mt-10 w-[30em]" @submit.prevent="login">
         <div class="text-danger" v-if="state.status === AsyncStatus.failed">Incorrect username or password</div>
 
         <LabeledFieldComponent label="Email">
@@ -53,8 +58,9 @@ export default defineComponent({
           <TextFieldComponent :field="state.form.password" type="password"/>
         </LabeledFieldComponent>
 
-        <div class="mt-6 flex">
-          <AsyncButtonVue class="block mx-auto" :state="state">LOGIN</AsyncButtonVue>
+        <div class="mt-9 flex">
+          <AsyncButtonVue class="block mr-auto w-[12em]" :state="state">Login</AsyncButtonVue>
+          <a href="/auth/signup/customer" class="block ml-auto w-[12em]"><BaseButton @click.prevent="signup" bg="white" text-color="dark" class="block w-full mx-auto" :state="state">Create Account</BaseButton></a>
         </div>
       </form>
     </div>
