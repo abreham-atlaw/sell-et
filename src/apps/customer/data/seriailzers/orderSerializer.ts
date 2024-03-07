@@ -51,7 +51,9 @@ export default class OrderSerializer extends Serializer<Order, DocumentData> {
             data.productId,
             ProductType[data.productType as keyof typeof ProductType],
             data.createDateTime,
-            this.shippingInfoSerializer.deserialize(data.shipinng_info)
+            this.shippingInfoSerializer.deserialize(data.shipinng_info),
+            data.quantity,
+            null,
         );
     }
 }
