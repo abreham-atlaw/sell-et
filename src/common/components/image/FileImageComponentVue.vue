@@ -23,7 +23,7 @@
       createImageUrl(file) {
         const reader = new FileReader();
         reader.onload = (e) => {
-          this.imageUrl = e.target.result;
+          this.imageUrl = e.target.result as string;
         };
         reader.readAsDataURL(file);
       }
