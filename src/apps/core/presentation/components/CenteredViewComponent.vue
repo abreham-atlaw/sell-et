@@ -20,7 +20,7 @@ export default defineComponent({
 
     <div class="w-full h-screen flex">
 
-        <div :class="`w-[${width}%] h-min-[${height}%]`" class="m-auto border shadow-sm bg-white">
+        <div :class="`w-[${width}%] h-[${height}%]`" class="m-auto border border-dark shadow-sm bg-white overflow-scroll p-5">
             <slot></slot>
         </div>
 

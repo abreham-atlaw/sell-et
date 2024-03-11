@@ -28,8 +28,8 @@ export default defineComponent({
     <div class="">
         <i class="fa-solid fa-shop text-6xl"></i>
     </div>
-    <h2 class="text-4xl mt-5 font-bold">Choose your store type</h2>
-    <p class="mt-3">Sell anything you want</p>
+    <h2 class="text-4xl mt-5 font-bold">What type of product are<br/>you selling today?</h2>
+    <p class="mt-3">Fill the correct information, so your account runs smoothly. Inocorrect information will<br/>on your profile might result in a suspension</p>
     
 
     <div class="flex flex-wrap mt-8">

@@ -18,7 +18,7 @@
       </a>
       <div class="text-2xl my-auto">
         <a href="#"><i class="fa-solid fa-search ml-10"></i></a>
-        <a href="#"><i class="fa-solid fa-user-circle ml-10"></i></a>
+        <a href="/auth/login"><i class="fa-solid fa-user-circle ml-10"></i></a>
       </div>
     </nav>
   </header>
