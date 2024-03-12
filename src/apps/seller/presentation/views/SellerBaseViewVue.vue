@@ -11,7 +11,7 @@ import SellerSidebarComponent from '../components/SellerSidebarComponentVue.vue'
       <div class="flex h-screen">
         <SellerSidebarComponent/>
         <div class="flex-1 flex flex-col overflow-hidden h-full">
-          <main class="flex-1 overflow-x-hidden overflow-y-auto bg-black bg-opacity-20 h-full ">
+          <main class="flex-1 overflow-x-hidden overflow-y-auto bg-black bg-opacity-5 h-full ">
             <div class="h-full">
               <RouterView/>
             </div>

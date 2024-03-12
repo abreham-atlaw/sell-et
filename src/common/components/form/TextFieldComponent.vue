@@ -55,7 +55,7 @@
 			},
 			borderColor: {
 				type: String,
-				default: "grey"
+				default: "blue-500"
 			},
 			textColor: {
 				type: String,

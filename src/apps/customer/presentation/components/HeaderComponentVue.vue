@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="flex pl-16 pr-10 py-5">
+    <nav class="flex pl-16 pr-10 py-3 border-[1px] border-[##707070]">
       <ul class="mr-auto my-auto">
         <li v-for="(link, index) in links" :key="index" class="dropdown mx-10 p-5">
           <a :href="link.link" class="dropbtn">{{ link.label }}<i v-if="link.children" class="fa-solid fa-chevron-down ml-5"></i></a>

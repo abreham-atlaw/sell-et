@@ -3,12 +3,20 @@
     <ViewModelView class="" :state="state" :view-model="viewModel">
         <div class="">
             <HeaderComponentVue/>
-            <section class="bg-[#632DCC] text-light py-36 px-16">
-                <h1 class="text-5xl font-bold">{{ productInfo.title }}</h1>
-                <p class="mt-5">{{ productInfo.description }}</p>
+            <section style="background-image: linear-gradient(to bottom right, #632DCC, #3A197D);" class="bg-[#632DCC] text-light py-28 px-16">
+                <h1 class="text-6xl font-bold">{{ productInfo.title }}</h1>
+                <p class="text-2xl mt-5">{{ productInfo.description }}</p>
             </section>
-            <section class="bg-light">
-                <div class="flex">
+            <section class="bg-light pt-10">
+                <div class="flex items-center mx-auto w-1/2 bg-white rounded-full px-10 py-4">
+                    <i class="fas fa-search mr-4"></i>
+                    <input 
+                    class="pl-2 w-full bg-white rounded-full focus:outline-none"
+                    type="search"
+                    placeholder="Search"
+                    />
+                </div>
+                <div class="flex mt-8">
                     <div v-for="instance in state.values!" class="w-1/3 p-5" :key="(instance.id as string)">
                         <ProductCardComponent :instance="productInfo.cardProductFactory(instance)"/>
                     </div>
@@ -86,7 +94,7 @@ const PRODUCT_TYPE_INFOS: ProductTypeInfo[] = [
     {
         key: "digital-product",
         title: "Digital Products",
-        description: "Buy Deigital Products Securely, Pay easily",
+        description: "Buy Digital Products Securely, Pay easily",
         repositoryFactory: () => new DigitalProductRepository(),
         cardProductFactory: (product: ShopProduct) => {
             const digitalProduct = product as DigitalProduct

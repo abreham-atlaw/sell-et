@@ -53,10 +53,10 @@ export default defineComponent({
     <div class="">
         <HeaderComponentVue/>
 
-        <div class="bg-light p-24">
+        <div class="bg-light pl-24 pr-24 pb-24 pt-16">
             <div class="rounded-[5em] bg-white flex">
                 <div class="w-[35%] mr-auto my-auto p-16">
-                    <h1 class="text-4xl font-bold">Buy Anything, Pay Digitally.</h1>
+                    <h1 class="text-5xl font-bold">Buy Anything, Pay Digitally.</h1>
                     <p class="mt-10 text-grey">Easily highlight your most popular work, organize videos and podcast episodes into series.</p>
                 </div>
                 <div class="w-[55%] rounded-[5em] overflow-clip my-auto">
@@ -64,13 +64,12 @@ export default defineComponent({
                 </div>
             </div>
 
-            <div class="mt-36">
-                <h2 class="font-bold text-3xl">Explore Categories</h2>
-                <div class="flex mt-10 ">
-
+            <div class="mt-24">
+                <h2 class="font-bold text-4xl mt-16">Explore Categories</h2>
+                <div class="flex mt-14 ">
                     <a  class="flex flex-col mx-auto" v-for="category in labels" :href="`/customer/list?category=${links.get(category[0])}`" :key="category[1]">
-                        <div class="mx-auto rounded-full w-16 h-16 flex bg-primary text-white">
-                            <span :class="icons.get(category[0])" class="m-auto"></span>
+                        <div class="mx-auto rounded-full w-24 h-24 flex bg-primary text-white">
+                            <span :class="icons.get(category[0])" class="m-auto" style="font-size: 1.65rem;"></span>
                         </div>
                         <p class="mt-5 text-center">{{category[1]}}</p>
                     </a>
@@ -79,32 +78,32 @@ export default defineComponent({
             </div>
         </div>
         
-        <div class="bg-[#95ACCA] flex flex-col p-24">
+        <div class="bg-[#95ACCA] flex flex-col px-24 py-20">
 
-            <h1 class="text-7xl">Showcase<br/>your work</h1>
+            <h1 class="text-7xl">Showcase your<br/>work</h1>
 
-            <p class="ml-auto w-[35%] -mt-5">Easily highlight your most popular work, organize videos and podcast episodes into series, and curate collections of posts for specific audiences.</p>
+            <p class="ml-auto w-[40%] text-right -mt-8">Easily highlight your most popular work, organize videos and podcast episodes into series, and curate collections of posts for specific audiences.</p>
 
-            <div class="w-3/5 mx-auto mt-16">
+            <div class="w-3/5 mx-auto mt-12">
                 <img :src="Home1Img" class="w-full">
             </div>
         </div>
 
-        <div class="bg-[#8AB3FF] flex px-24 py-16">
+        <div class="flex px-24 py-16 items-center" style="background-image: linear-gradient(to bottom left, #8AB3FF, #5873A5);">
 
-            <div class="w-1/5 mr-auto">
+            <div class="w-[25%] mr-auto">
                 <img :src="Home2Img" class="w-full">
             </div>
-            <div class="w-[70%] pr-[10%]">
+            <div class="w-[70%] pl-14" >
                 <h1 class="text-7xl">Turning passions into businesses</h1>
                 <div class="flex mt-10">
-                    <div class="w-1/3 mr-auto">
+                    <div class="w-1/2 mr-[10%]">
                         <h2 class="text-2xl font-bold">More ways to earn</h2>
                         <p class="mt-10">
                             On Patreon, you can build a lasting business outside of the ad-based ecosystem, with revenue streams ranging from membership for offering ongoing benefits, to online shops for selling individual videos, podcast episodes, and more.
                         </p>
                     </div>
-                    <div class="w-1/3">
+                    <div class="w-1/2">
                         <h2 class="text-2xl font-bold">Unlock Growth</h2>
                         <p class="mt-10">
                             Patreon isn’t just for creative growth, it’s for professional growth too. Get in-depth analytics about your fans, dig into powerful relationship management tools, and tap into a growing creator community.
