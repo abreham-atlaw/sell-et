@@ -1,7 +1,7 @@
 <template>
     <div class="py-10 flex flex-col">
 
-        <div class="flex shadow-xl border border-dark h-[20em]">
+        <div class="flex border-2 border-dark h-[20em]">
             <div class="w-1/3 h-full">
                 <img :src="instance.image" class="w-full h-full object-cover"/>
             </div>
@@ -11,19 +11,18 @@
                 <p>{{ instance.description }}</p>
             </div>
         </div>
-        <div class="bg-light">
+        <div class="bg-light mt-8 p-8">
             <div class="">
                 <div class="flex">
                     <span>Target Amount</span>
                     <span class="ml-auto">{{ progress * 100 }}%</span>
                 </div>
-                <div class="w-full bg-grey rounded-full">
-                    <div class="h-2 bg-primary rounded-full" :class="`w-[${progress*100}%]`"></div>
+                <div class="w-full bg-grey rounded-full mt-2">
+                    <div class="h-6 bg-primary rounded-full" :class="`w-[${progress*100}%]`"></div>
                   </div>
-                  
             </div>
 
-            <div class="flex mt-10">
+            <div class="flex mt-14">
                 <div v-for="suggestion in suggestions" :key="suggestion.toString()" @click="() => {setAmount(suggestion)}" class="border border-primary rounded-xl flex mx-auto h-36 w-36">
                     <div class="m-auto">{{  suggestion }} Birr</div>
                 </div>

@@ -1,7 +1,7 @@
 <template>
     <div class="py-10 flex flex-col">
 
-        <div class="flex shadow-xl border border-dark h-[20em]">
+        <div class="flex  border-2 border-dark h-[20em]">
             <div class="w-1/3 h-full">
                 <img :src="instance.image" class="w-full h-full object-cover"/>
             </div>

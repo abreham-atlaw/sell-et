@@ -23,7 +23,7 @@ export default defineComponent({
                 />
             </div>
             <div>
-                <h1 class="animate-pulse text-primary text-center text-3xl pt-[50%]">Loading...</h1>
+                <h1 class="animate-pulse text-primary text-center text-3xl font-semibold pt-[50%]">Loading...</h1>
             </div>
         </div>
 

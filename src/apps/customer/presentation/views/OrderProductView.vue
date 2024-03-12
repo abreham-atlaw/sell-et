@@ -1,11 +1,11 @@
 <template>
-    <AuthenticatedView :valid-status="[AuthenticationStatus.customer]">
+    <AuthenticatedView :valid-status="[AuthenticationStatus.customer]" class="bg-[#F7F7F7]">
 
         <ViewModelView :state="state" :view-model="viewModel">
 
             <CenteredViewComponentVue>
     
-                <div class="px-16 bg-white">
+                <div class="px-10">
     
                     <PhysicalProductOrderComponent v-if="state.productType === ProductType.physicalProduct" :on-complete="(quantity) => {viewModel.orderPhysicalProduct(quantity)}" :state="state" :instance="(state.product! as PhysicalProduct)" :form="(state.shippingInfoForm as any)"/>
                     
