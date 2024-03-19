@@ -42,9 +42,9 @@ export default defineComponent({
 
 <template>
   <div class="flex items-center justify-center h-screen px-6 bg-gray-200">
-    <div class="px-16 py-[6rem] align-center bg-white shadow-md">
+    <div class="px-16 py-[6rem] border border-primary align-center bg-white">
       <div class="flex flex-col items-center justify-center">
-        <h2 class="text-2xl font-bold">Welcome Back</h2>
+        <h2 class="text-3xl font-semibold">Welcome Back</h2>
         <span class="">Please login to your account</span>
       </div>
 

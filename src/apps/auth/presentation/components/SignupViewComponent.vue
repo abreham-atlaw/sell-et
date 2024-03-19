@@ -39,14 +39,14 @@ export default defineComponent({
     <div class="p-10">
         <form class="flex flex-col" @submit.prevent="() => {onSubmit()}">
 
-            <div class="">
+            <!-- <div class="">
                 <i class="fa-solid fa-circle-user text-6xl"></i>
-            </div>
-            <h2 class="text-4xl mt-3">Create your account</h2>
+            </div> -->
+            <h2 class="text-3xl mt-3">Create your account</h2>
             <p class="mt-3">Fill the correct information, so your account runs smoothly. Inocorrect information will on your profile might result in a suspension</p>
             
             <ErrorTextVue :error="state.error" />
-            <div class="flex flex-wrap mt-5">
+            <div class="flex flex-wrap mt-8">
                 <div class="w-[45%] mr-auto">
                     <LabeledFieldComponent label="First Name">
                         <TextFieldComponent :field="form.firstName" placeholder="Enter First Name"/>

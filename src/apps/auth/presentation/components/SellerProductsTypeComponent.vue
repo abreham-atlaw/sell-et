@@ -55,17 +55,17 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="py-10 px-24">
+  <div class="py-6 px-14">
 
-    <div class="">
+    <!-- <div class="">
         <i class="fa-solid fa-shop text-6xl"></i>
-    </div>
-    <h2 class="text-4xl mt-5 font-bold">Choose your store type</h2>
-    <p class="mt-3">Sell anything you want</p>
+    </div> -->
+    <h2 class="text-4xl mt-5 ">What type of product<br/>are you selling today?</h2>
+    <p class="mt-3">Fill the correct information, so your account runs smoothly. <br/>Inocorrect information will on your profile might result in a suspension</p>
     
 
     <div class="flex flex-wrap mt-8">
-		<div v-for="(item, index) in Object.values(ProductType).filter(value => !isNaN(Number(value)))" :key="index" class="w-1/2 mr-auto" :class="`p${(index % 2 == 0)?'r':'l'}-[10%]`">
+		<div v-for="(item, index) in Object.values(ProductType).filter(value => !isNaN(Number(value)))" :key="index" class="w-1/2 mr-auto" :class="`p${(index % 2 == 0)?'r':'l'}-[4%]`">
 			<label class="block mt-5">
                 <input
                     class="hidden w-full bg-white border rounded-lg focus:outline-none font-medium leading-none text-gray-800 py-5 w-full pl-3"

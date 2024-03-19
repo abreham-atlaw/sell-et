@@ -41,14 +41,14 @@ export default defineComponent({
     <div class="p-10">
         <form class="flex flex-col" @submit.prevent="() => {onSubmit()}">
 
-            <div class="">
+            <!-- <div class="">
                 <i class="fa-solid fa-shield-halved text-6xl"></i>
-            </div>
-            <h2 class="text-4xl mt-3">Customize your store</h2>
-            <p class="mt-3">Select as many as you want. You can change your store type afterwards also</p>
+            </div> -->
+            <h2 class="text-3xl mt-3">Customize your store</h2>
+            <p class="mt-3">Select as many as you want. You can change<br/>your store type afterwards also</p>
             
             <ErrorTextVue :error="state.error"/>
-            <div class="flex flex-wrap mt-5">
+            <div class="flex flex-wrap mt-10">
                 <div class="w-[45%] mr-auto">
                     <LabeledFieldComponent label="Shop Title">
                         <TextFieldComponent :field="form.title" placeholder="Enter Shop Name"/>

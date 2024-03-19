@@ -3,21 +3,25 @@
     <ViewModelView class="" :state="state" :view-model="viewModel">
         <div class="">
             <HeaderComponentVue/>
-            <section style="background-image: linear-gradient(to bottom right, #632DCC, #3A197D);" class="bg-[#632DCC] text-light py-28 px-16">
+            <section :style="backgroundStyle" class=" text-light py-28 px-16">
                 <h1 class="text-6xl font-bold">{{ productInfo.title }}</h1>
                 <p class="text-2xl mt-5">{{ productInfo.description }}</p>
             </section>
             <section class="bg-light pt-10">
-                <div class="flex items-center mx-auto w-1/2 bg-white rounded-full px-10 py-4">
+                <!-- <div class="flex items-center mx-auto w-1/2 bg-white rounded-full px-10 py-4">
                     <i class="fas fa-search mr-4"></i>
                     <input 
                     class="pl-2 w-full bg-white rounded-full focus:outline-none"
                     type="search"
                     placeholder="Search"
                     />
+                </div> -->
+                <div class="flex flex-col items-center justify-center">
+                    <h2 class="text-4xl font-semibold mb-4">Choose your ticket</h2>
+                    <span class="text-center mb-4">Fill the correct information, so your account runs smoothly.<br/>Inocorrect information will on your profile might result in a suspension</span>
                 </div>
-                <div class="flex mt-8">
-                    <div v-for="instance in state.values!" class="w-1/3 p-5" :key="(instance.id as string)">
+                <div class="flex items-center justify-center mt-8">
+                    <div v-for="instance in state.values!" class="w-1/3 px-12" :key="(instance.id as string)">
                         <ProductCardComponent :instance="productInfo.cardProductFactory(instance)"/>
                     </div>
                 </div>
@@ -27,6 +31,7 @@
    
 </template>
 <script lang="ts">
+import TicketBackgroundImg from "@/assets/customer/images/ticket-background.png";
 import ViewModelView from '@/common/components/views/ViewModelView.vue';
 import ModelListState from '@/common/state/modelListState';
 import ModelListViewModel from '@/common/viewmodel/modelListViewModel';
@@ -150,6 +155,11 @@ export default defineComponent({
             state,
             productInfo,
             viewModel: new ModelListViewModel<any>(state.value, productInfo.repositoryFactory()),
+            backgroundStyle: {
+                backgroundImage: 'url(' + TicketBackgroundImg + ')',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            },
         }
     },
     components:{

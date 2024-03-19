@@ -5,7 +5,7 @@
 
             <CenteredViewComponentVue>
     
-                <div class="px-10">
+                <div class="px-2">
     
                     <PhysicalProductOrderComponent v-if="state.productType === ProductType.physicalProduct" :on-complete="(quantity) => {viewModel.orderPhysicalProduct(quantity)}" :state="state" :instance="(state.product! as PhysicalProduct)" :form="(state.shippingInfoForm as any)"/>
                     

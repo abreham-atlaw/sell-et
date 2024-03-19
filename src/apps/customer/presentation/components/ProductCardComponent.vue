@@ -1,22 +1,24 @@
 <template>
         
-    <div class="bg-white shadow-sm p-5">
+    <div class="bg-white shadow-sm">
         <img :src="instance.image" class="w-full h-[15em] object-cover"/>
-        <div class="flex text-2xl mt-5">
-            <span class="">{{instance.title}}</span>
-            <span class="ml-auto font-bold">{{instance.price}} Birr</span>
+        <div class="p-4 pb-8">
+            <div class="flex mt-2">
+            <span class="text-lg">{{instance.title}}</span>
+            <span class="ml-auto text-lg font-bold">{{instance.price}} Birr</span>
+            </div>
+            <p class="mt-5 text-sm text-[#666666]">
+                Fill the correct information, so your account runs smoothly. Inocorrect information will on your profile might result in a suspension
+            </p>
+            <div class="flex mt-5">
+                <p>By</p>
+                <span class="my-auto text-primary ml-3">{{ instance.shop!.title }}</span>
+            </div>
+            <a :href="`/customer/order/?id=${instance.id!}&category=${instance.type}`" class="w-full mt-5 block">
+                <BaseButton class="w-full">Purchase Now</BaseButton>
+            </a>
+            </div>
         </div>
-        <p class="mt-5">
-            {{ instance.description }}
-        </p>
-        <div class="flex mt-5">
-            <i class="fa-solid fa-shop my-auto"></i>
-            <span class="my-auto text-primary ml-3">{{ instance.shop!.title }}</span>
-        </div>
-        <a :href="`/customer/order/?id=${instance.id!}&category=${instance.type}`" class="w-full mt-5 block">
-            <BaseButton class="w-full">Purchase Now</BaseButton>
-        </a>
-    </div>
 
 </template>
 

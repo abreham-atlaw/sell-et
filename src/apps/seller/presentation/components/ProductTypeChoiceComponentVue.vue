@@ -62,18 +62,15 @@ export default defineComponent({
 
 </script>
 <template>
-    <div class="border-dark border flex p-5 py-4" :class="isSelected ? 'bg-primary text-light' : 'bg-white text-dark'" @click="() =>{onSelect(productType)}">
+    <div class="border-primary border-2 flex px-3 py-5" :class="isSelected ? 'bg-primary text-light' : 'bg-white text-dark'" @click="() =>{onSelect(productType)}">
 
-        <div class="flex justify-center items-center mr-4 w-10 h-10 bg-blue-700 rounded" :class="{'bg-blue-700': isSelected}">
-            <i :class="[icons.get(productType), 'text-white text-sm']"></i>
+        <div class="flex justify-center items-center mr-4 w-10 h-10 bg-primary rounded" :class="{'bg-blue-700': isSelected}">
+            <i :class="[icons.get(productType), ' text-white text-sm']"></i>
         </div>
 
-        <div class="flex-grow">
-                <div class="font-semibold">{{ labels.get(productType) }}</div>
-                <div class=" text-xs">Phone</div> <!-- Product description -->
-            </div>
+        <div class="text-xl my-auto">{{ labels.get(productType) }}</div>
 
-        <div v-if="isSelected" class="w-5 h-5 rounded-full border border light flex" :class="isSelected ? 'bg-light text-primary' : ''">
+        <div v-if="isSelected" class="w-5 h-5 my-auto ml-auto rounded-full border border light flex" :class="isSelected ? 'bg-light text-primary' : ''">
             <span class="fas fa-check m-auto text-sm"></span>
         </div>
 

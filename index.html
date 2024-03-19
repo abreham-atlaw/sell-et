@@ -24,12 +24,21 @@
               success: '#00BC62',
               grey: '#525252',
             },
+          },
+          fontFamily: {
+            aeonik: ['aeoniktrial-regular', 'sans-serif']
           }
         }
       }
 	  </script>
+    <style>
+      @font-face {
+        font-family: aeoniktrial-regular;
+        src: url("/aeoniktrial-regular.otf");
+      }
+    </style>
   </head>
-  <body>
+  <body class="font-aeonik">
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
