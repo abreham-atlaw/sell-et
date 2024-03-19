@@ -1,0 +1,279 @@
+@font-face {
+font-family: 'Graphik';
+  src:  url('../font/GraphikBlack.otf') format("opentype"),
+  src:  url('../font/GraphikBold.otf') format("opentype"),
+  src:  url('../font/GraphikMedium.otf') format("opentype"),
+  src:  url('../font/GraphikRegular.otf') format("opentype"),
+  src:  url('../font/GraphikSemibold.otf') format("opentype"),
+
+}
+
+@font-face {
+font-family: 'Aeonik TRIAL';
+src:  url('../font/AeonikTRIAL-Regular.otf') format("opentype"),
+}
+
+body{
+  margin:0px;
+  padding:0px;
+  font-family: Aeonik TRIAL;
+  color:#000;
+}
+
+.right{
+  float:right;
+}
+
+.left{
+  float:left;
+}
+
+.width-80{
+  width:80%;
+}
+
+.width-40{
+  width:40%;
+}
+
+.padding-50{
+  padding:50px;
+}
+
+.margin-5-r{
+  margin-right:5px;
+}
+
+.flat-link{
+  color: inherit;
+  text-decoration: none;
+}
+
+
+#error-checkout{
+  padding:70px;
+  background: #F7F7F7;
+  height: 70vh;
+}
+
+#error-checkout #main-box{
+  background: #FFF;
+  height: 400px;
+  border-radius: 30px;
+}
+
+#error-checkout #main-icon{
+  font-size: 30px;
+  margin-top:150px!important;
+}
+
+#error-checkout .sub-text{
+  color:#AAA;
+  width: 70%;
+}
+
+#error-checkout .main-back{
+  padding:15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: #FFF;
+  border:1px solid #1650CF;
+  text-decoration: none;
+  border-radius: 10px;
+  color:#000;
+}
+
+#ticket-checkout{
+  padding:70px;
+  background: #F7F7F7;
+  min-height: 50vh;
+}
+
+#ticket-checkout #checkout-container{
+  background: #FFF;
+  min-height: 600px;
+  border:2px solid #707070;
+  padding:50px;
+}
+
+
+#ticket-checkout #checkout-container .main-back{
+  padding:15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: #FFF;
+  border:1px solid #1650CF;
+  text-decoration: none;
+  border-radius: 10px;
+  color:#000;
+}
+
+
+
+#ticket-checkout #checkout-container #product-info{
+  border:2px solid #000;
+  margin-top:50px;
+}
+
+#ticket-checkout #checkout-container #product-info .main-image{
+  width:100%;
+  margin-left:-10px;
+  padding:20px;
+}
+
+#ticket-checkout #checkout-container #product-info .catageory{
+  width:100%;
+  margin-left:-10px;
+  margin-top:20px;
+  background: #1650CF;
+  color:#FFF;
+  padding:10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+}
+
+#ticket-checkout #checkout-container #product-info .information{
+  margin-top:23px;
+}
+
+#ticket-checkout #checkout-container #product-info .header-text{
+  font-weight: bolder;
+  margin-top:10px;
+}
+
+#ticket-checkout #checkout-container #product-info .sub-text{
+  width:70%;
+}
+
+#ticket-checkout #ticket-options{
+  background: #f7f7f7;
+  height: 40vh;
+  margin-top:50px;
+  padding:70px;
+}
+
+#ticket-checkout #ticket-options .option-btn{
+  padding:50px;
+  padding-left: 80px;
+  padding-right: 80px;
+  border:2px solid #1650cf;
+  color:#000;
+  background:#FFF;
+  text-decoration: none;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+#ticket-checkout #ticket-options .option-btn:hover{
+  background: #1650cf;
+  color:#FFF;
+  transition: 0.3s;
+}
+
+#ticket-checkout .next-btn{
+  text-decoration: none;
+  float:right;
+  margin-top:20px;
+  color:#FFF;
+  background: #1650CF;
+  padding:10px;
+  padding-left: 25px;
+  padding-right: 45px;
+  border-radius: 10px;
+}
+
+#product-checkout{
+  padding:70px;
+  background: #F7F7F7;
+  min-height: 100vh;
+}
+
+#product-checkout .main-image{
+  width:100%;
+  height: 300px;
+  object-fit: contain;
+  margin-top:50px;
+}
+
+#product-checkout #checkout-container{
+  background: #FFF;
+  min-height: 600px;
+  border:2px solid #707070;
+  padding:50px;
+}
+
+#product-checkout #middle{
+  margin-top:auto;
+  margin-bottom: auto;
+  display: block;
+  padding:50px;
+}
+
+#product-checkout #checkout-container .main-back{
+  padding:15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background: #FFF;
+  border:1px solid #1650CF;
+  text-decoration: none;
+  border-radius: 10px;
+  color:#000;
+}
+
+#product-checkout #checkout-container .sub-text{
+  width:80%;
+}
+
+#product-checkout #checkout-container .header-text{
+  font-weight: bold;
+}
+
+#product-checkout #checkout-container .breaker{
+  width:100%;
+  height: 10px;
+  float:left;
+}
+
+#product-checkout #checkout-container .sub-left{
+  float:left;
+  color:#AAA;
+  margin:0px;
+}
+
+#product-checkout #checkout-container .sub-right{
+  float:right;
+  color:#AAA;
+  margin:0px;
+}
+
+#product-checkout #checkout-container .main-left{
+  float:left;
+  color:#000;
+  margin:0px;
+  font-weight: bold;
+}
+
+#product-checkout #checkout-container .main-right{
+  float:right;
+  color:#000;
+  margin:0px;
+  font-weight: bold;
+}
+
+#product-checkout .next-btn{
+  text-decoration: none;
+  float:right;
+  margin-top:20px;
+  color:#FFF;
+  background: #1650CF;
+  padding:10px;
+  padding-left: 25px;
+  padding-right: 45px;
+  border-radius: 10px;
+}
+
+#main-footer{
+  height: 60vh;
+  background: #000000;
+}
