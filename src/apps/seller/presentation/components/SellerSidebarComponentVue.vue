@@ -45,7 +45,6 @@ export default defineComponent({
                 // { label: 'Settings', icon: 'fas fa-tools', link: 'seller//settings' }, // Lighter settings icon
                 // ],
                 menuItems3: [
-                { label: 'Settings', icon: 'fas fa-tools', link: 'seller//settings' }, // Lighter support icon
                 { label: 'Logout', icon: 'fas fa-door-open', link: '/auth/logout' }, // Lighter logout icon
             ],
 
