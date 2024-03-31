@@ -18,9 +18,9 @@ export default defineComponent({
 </script>
 <template>
 
-    <div class="w-full h-screen flex">
+    <div class="w-full min-h-screen flex py-10">
 
-        <div :class="`w-[${width}%] h-[${height}%]`" class="m-auto border border-primary shadow-sm bg-white overflow-scroll px-12 py-5">
+        <div :class="`w-[${width}%] min-h-[${height}%]`" class="m-auto border border-primary shadow-sm bg-white px-12 py-5">
             <slot></slot>
         </div>
 

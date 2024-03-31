@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="bg-light flex flex-wrap mt-10 py-4 space-x-2 ">
-            <div v-for="pkg in instance.packages" :key="pkg.title" class=" rounded-lg px-10 py-4 text-center mx-10 bg-white border-2 border-primary" :class="(pkg === selectedPackage)?'border border-primary':''">
+            <div v-for="pkg in instance.packages" :key="pkg.title" class=" rounded-lg px-10 mr-5 py-4 my-5 text-center bg-white border-2 border-primary" :class="(pkg === selectedPackage)?'border border-primary':''">
                 <h3 class="text-2xl">{{ pkg.price }}</h3>
                 <div class="text-lg font-bold">{{ pkg.title }}</div>
                 <NextButtonComponent class="mt-6" :color="(pkg === selectedPackage)?'primary':'grey'" :on-click="() => {selectPackage(pkg)}" :text="(pkg === selectedPackage)?'Selected':'Select'" :icon="(pkg === selectedPackage)?'fa-solid fa-circle-check':''"/>
