@@ -74,7 +74,7 @@ export default defineComponent({
             deep: true,
             handler(newValue: OrderProductState){
                 if(newValue.status === AsyncStatus.done){
-                    window.location = "/payment-error.html";
+                    window.location = "/payment-error.html" as any;
                 }
             }
         }
