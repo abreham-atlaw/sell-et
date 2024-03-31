@@ -11,6 +11,9 @@ import OrderProductView from '@/apps/customer/presentation/views/OrderProductVie
 import OrderSuccessfullViewVue from '@/apps/customer/presentation/views/OrderSuccessfullViewVue.vue'
 import LogoutViewVue from '@/apps/auth/presentation/views/LogoutViewVue.vue'
 import ShopDetailView from '@/apps/customer/presentation/views/ShopDetailView.vue'
+import ListOrdersVue from '@/apps/seller/presentation/views/ListOrdersVue.vue'
+import ListCustomersVue from '@/apps/seller/presentation/views/ListCustomersVue.vue'
+import ListSalesVue from '@/apps/seller/presentation/views/ListSalesVue.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -74,6 +77,21 @@ const router = createRouter({
           path: "publish",
           name: "Publish",
           component: PublishProductView
+        },
+        {
+          path: "orders",
+          name: "Orders",
+          component: ListOrdersVue
+        },
+        {
+          path: "customers",
+          name: "Customers",
+          component: ListCustomersVue
+        },
+        {
+          path: "sales",
+          name: "Sales",
+          component: ListSalesVue
         }
       ]
     }
