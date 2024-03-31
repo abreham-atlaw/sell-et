@@ -39,6 +39,7 @@ export default defineComponent({
                 { label: 'Sales', icon: 'far fa-chart-bar', link: '/seller/sales' }, // Lighter sales chart icon
                 { label: 'Customers', icon: 'far fa-user-circle', link: '/seller/customers' }, // Lighter customers icon
                 { label: 'Orders', icon: 'fas fa-receipt', link: '/seller/orders' }, // Lighter orders icon
+                { label: "Logistics", icon: 'fa-solid fa-truck-fast', link: '/admin-logistics.html'}
                 ],
                 // menuItems2: [
                 // { label: 'Settings', icon: 'fas fa-tools', link: 'seller//settings' }, // Lighter settings icon

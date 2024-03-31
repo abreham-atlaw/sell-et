@@ -50,7 +50,7 @@ export default class OrderProductViewModel extends AsyncViewModel<OrderProductSt
                     quantity,
                     null
                 )
-                await this.orderRepository.create(this.state.order);
+                // await this.orderRepository.create(this.state.order);
             }
         );
     }
@@ -67,7 +67,7 @@ export default class OrderProductViewModel extends AsyncViewModel<OrderProductSt
                     null,
                     null
                 );
-                await this.orderRepository.create(this.state.order);
+                // await this.orderRepository.create(this.state.order);
             }
         );
     }
@@ -85,7 +85,7 @@ export default class OrderProductViewModel extends AsyncViewModel<OrderProductSt
                     null,
                     ticketPackage
                 );
-                await this.orderRepository.create(this.state.order);
+                // await this.orderRepository.create(this.state.order);
             }
         );
     }
@@ -102,7 +102,7 @@ export default class OrderProductViewModel extends AsyncViewModel<OrderProductSt
                     quantity,
                     null
                 );
-                await this.orderRepository.create(this.state.order);
+                // await this.orderRepository.create(this.state.order);
             }
         );
     }

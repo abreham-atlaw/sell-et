@@ -10,7 +10,7 @@ import ListProductsView from '@/apps/customer/presentation/views/ListProductsVie
 import OrderProductView from '@/apps/customer/presentation/views/OrderProductView.vue'
 import OrderSuccessfullViewVue from '@/apps/customer/presentation/views/OrderSuccessfullViewVue.vue'
 import LogoutViewVue from '@/apps/auth/presentation/views/LogoutViewVue.vue'
-
+import ShopDetailView from '@/apps/customer/presentation/views/ShopDetailView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -59,6 +59,11 @@ const router = createRouter({
       path: "/customer/order",
       name: "order-products",
       component: OrderProductView
+    },
+    {
+      path: "/customer/shop/detail",
+      name: "shop-detail",
+      component: ShopDetailView
     },
     {
       path: "/seller",

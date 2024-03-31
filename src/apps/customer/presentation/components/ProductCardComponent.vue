@@ -8,11 +8,11 @@
             <span class="ml-auto text-lg font-bold">{{instance.price}} Birr</span>
             </div>
             <p class="mt-5 text-sm text-[#666666]">
-                Fill the correct information, so your account runs smoothly. Inocorrect information will on your profile might result in a suspension
+                {{ instance.description }}
             </p>
             <div class="flex mt-5">
                 <p>By</p>
-                <span class="my-auto text-primary ml-3">{{ instance.shop!.title }}</span>
+                <a :href="`/customer/shop/detail?store_id=${instance.shop.id}`" class="my-auto text-primary ml-3">{{ instance.shop!.title }}</a>
             </div>
             <a :href="`/customer/order/?id=${instance.id!}&category=${instance.type}`" class="w-full mt-5 block">
                 <BaseButton class="w-full">Purchase Now</BaseButton>

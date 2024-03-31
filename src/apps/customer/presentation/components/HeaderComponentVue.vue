@@ -1,8 +1,8 @@
 <template>
   <header>
-    <nav class="flex pl-16 pr-10 py-3 border-[1px] border-[##707070]">
+    <nav class="flex pl-5 pr-10 border-[1px] border-[##707070]">
       <ul class="mr-auto my-auto">
-        <li v-for="(link, index) in links" :key="index" class="dropdown mx-10 p-5">
+        <li v-for="(link, index) in links" :key="index" class="dropdown p-5">
           <a :href="link.link" class="dropbtn">{{ link.label }}<i v-if="link.children" class="fa-solid fa-chevron-down ml-5"></i></a>
           <div v-if="link.children" class="dropdown-content">
             <ul>
@@ -14,10 +14,9 @@
         </li>
       </ul>
       <a href="/auth/signup/seller" class="my-auto">
-        <BaseButton bg="dark">Start Shop</BaseButton>
+        <BaseButton rounded="full" px="10" bg="dark">Start Selling</BaseButton>
       </a>
       <div class="text-2xl my-auto">
-        <a href="#"><i class="fa-solid fa-search ml-10"></i></a>
         <a href="/auth/login"><i class="fa-solid fa-user-circle ml-10"></i></a>
       </div>
     </nav>
@@ -39,7 +38,8 @@ export default defineComponent({
               {label: "Ticket", link: "/customer/list?category=ticket"},
               {label: "Donation", link: "/customer/list?category=donation"},
           ]},
-          {label: "Learn", link:"#", children: null}
+          {label: "Resource", link:"/resource.html", children: null},
+          {label: "Terms & Conditions", link:"/terms&conditions.html", children: null}
       ],
     };
   },

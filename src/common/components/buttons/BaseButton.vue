@@ -19,6 +19,10 @@ export default defineComponent({
 		rounded: {
 			type: String,
 			default: "lg"
+		},
+		px: {
+			type: String,
+			default: "5"
 		}
 	},
 	computed: {
@@ -30,7 +34,7 @@ export default defineComponent({
 </script>
 <template>
 
-	<button :class="`bg-${bg} text-${textColor} border-${outlineColor} rounded-${rounded}`" class="border py-3 px-5 text-sm">
+	<button :class="`bg-${bg} text-${textColor} border-${outlineColor} rounded-${rounded} px-${px}`" class="border py-3 text-sm">
 		<slot></slot>
 	</button>
 

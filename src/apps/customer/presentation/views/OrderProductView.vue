@@ -1,27 +1,29 @@
 <template>
-    <AuthenticatedView :valid-status="[AuthenticationStatus.customer]" class="bg-[#F7F7F7]">
+    <ViewModelView :state="state" :view-model="viewModel">
+        
+        <HeaderComponentVue />
+        <CenteredViewComponentVue>
 
-        <ViewModelView :state="state" :view-model="viewModel">
+            <a href="/">
+                <NextButtonComponent :reverse="true" icon="fa-solid fa-arrow-left" text="Back"/>
+            </a>
 
-            <CenteredViewComponentVue>
-    
-                <div class="px-2">
-    
-                    <PhysicalProductOrderComponent v-if="state.productType === ProductType.physicalProduct" :on-complete="(quantity) => {viewModel.orderPhysicalProduct(quantity)}" :state="state" :instance="(state.product! as PhysicalProduct)" :form="(state.shippingInfoForm as any)"/>
-                    
-                    <TicketOrderComponentVue v-else-if="state.productType === ProductType.ticket" :on-complete="(pkg) => {viewModel.orderTicket(pkg)}" :state="state" :instance="(state.product! as Ticket)"/>
-                    
-                    <DigitalProductOrderComponentVue v-else-if="state.productType === ProductType.digitalProducts" :on-complete="() => {viewModel.orderDigitalProduct()}" :state="state" :instance="(state.product! as DigitalProduct)"/>
-    
-                    <DonationOrderComponent v-else :on-complete="(amount: number) => {viewModel.orderDonation(amount)}" :state="state" :instance="(state.product! as Donation)" />
-                </div>
+            <div class="px-2 mt-5">
+
+                <PhysicalProductOrderComponent v-if="state.productType === ProductType.physicalProduct" :on-complete="(quantity) => {viewModel.orderPhysicalProduct(quantity)}" :state="state" :instance="(state.product! as PhysicalProduct)" :form="(state.shippingInfoForm as any)"/>
                 
-    
-            </CenteredViewComponentVue>
-    
-        </ViewModelView>
+                <TicketOrderComponentVue v-else-if="state.productType === ProductType.ticket" :on-complete="(pkg) => {viewModel.orderTicket(pkg)}" :state="state" :instance="(state.product! as Ticket)"/>
+                
+                <DigitalProductOrderComponentVue v-else-if="state.productType === ProductType.digitalProducts" :on-complete="() => {viewModel.orderDigitalProduct()}" :state="state" :instance="(state.product! as DigitalProduct)"/>
 
-    </AuthenticatedView>
+                <DonationOrderComponent v-else :on-complete="(amount: number) => {viewModel.orderDonation(amount)}" :state="state" :instance="(state.product! as Donation)" />
+            </div>
+            
+
+        </CenteredViewComponentVue>
+        <FooterComponentVue/>
+
+    </ViewModelView>
     
 </template>
 <script lang="ts">
@@ -42,6 +44,9 @@ import type Donation from '@/apps/seller/data/models/donation';
 import type DigitalProduct from '@/apps/seller/data/models/digitalProduct';
 import AuthenticatedView from '@/common/components/views/AuthenticatedView.vue';
 import AuthenticationStatus from '@/apps/auth/data/models/authenticationStatus';
+import NextButtonComponent from '@/apps/core/presentation/components/NextButtonComponent.vue';
+import HeaderComponentVue from '../components/HeaderComponentVue.vue';
+import FooterComponentVue from '../components/FooterComponentVue.vue';
 
 const productTypeMap = new Map([
     ["physical-product", ProductType.physicalProduct],
@@ -69,7 +74,7 @@ export default defineComponent({
             deep: true,
             handler(newValue: OrderProductState){
                 if(newValue.status === AsyncStatus.done){
-                    this.$router.push("/customer/order/success")
+                    this.$router.push("/payment-error.html")
                 }
             }
         }
@@ -80,8 +85,10 @@ export default defineComponent({
         TicketOrderComponentVue,
         DigitalProductOrderComponentVue,
         DonationOrderComponent,
+        NextButtonComponent,
         ViewModelView,
-        AuthenticatedView
+        HeaderComponentVue,
+        FooterComponentVue
     }
 
 })
