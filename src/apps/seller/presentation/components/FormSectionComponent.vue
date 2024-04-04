@@ -24,7 +24,7 @@ export default defineComponent({
         
         <div class="border rounded-t-lg border-dark flex px-10 py-5">
             <h3 class="text-2xl">{{title}}</h3>
-            <p v-if="note != null">{{note}}</p>
+            <p v-if="note != null" class="my-auto mx-auto"><i class="bi bi-info-circle mr-5"></i>{{note}}</p>
         </div>
 
         <div class="p-10 border border-dark rounded-b-lg">

@@ -39,7 +39,7 @@ export default defineComponent({
 
     <form @submit.prevent="() => {onSubmit()}">
 
-        <FormSectionComponent title="Digital Product Information">
+        <FormSectionComponent note="Add proper sufficient and truthfull that if not misleading to customers" title="Digital Product Information">
 
             <div class="flex flex-wrap">
                 <div class="w-[45%] mr-auto">
@@ -68,7 +68,7 @@ export default defineComponent({
 
         </FormSectionComponent>
 
-        <FormSectionComponent title="Digital Product File" class="mt-20">
+        <FormSectionComponent note="Add proper sufficient and truthfull that if not misleading to customers" title="Digital Product File" class="mt-20">
 
             <div class="flex">
                 <div class="mx-auto">

@@ -39,7 +39,7 @@ export default defineComponent({
 
     <form @submit.prevent="() => {onSubmit()}">
 
-        <FormSectionComponent title="Donation Details">
+        <FormSectionComponent note="Add proper sufficient and truthfull that if not misleading to customers" title="Donation Details">
 
             <div class="flex flex-wrap">
                 <div class="w-[45%] mr-auto">

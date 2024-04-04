@@ -40,13 +40,13 @@ export default defineComponent({
 
     <form @submit.prevent="() => {onSubmit()}">
 
-        <FormSectionComponent title="Product Image">
+        <FormSectionComponent note="Add proper sufficient and truthfull that if not misleading to customers" title="Product Image">
 
             <MultipleFileUploadFieldComponentVue :field="form.productImages"/>
 
         </FormSectionComponent>
 
-        <FormSectionComponent title="Product Details" class="mt-20">
+        <FormSectionComponent note="Add proper sufficient and truthfull that if not misleading to customers" title="Product Details" class="mt-20">
 
             <div class="flex">
                 <div class="w-[45%] mr-auto">

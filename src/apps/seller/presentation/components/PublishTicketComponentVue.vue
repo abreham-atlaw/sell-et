@@ -41,7 +41,7 @@ export default defineComponent({
 
     <form @submit.prevent="() => {onSubmit()}">
 
-        <FormSectionComponent title="Ticket Details">
+        <FormSectionComponent note="Add proper sufficient and truthfull that if not misleading to customers" title="Ticket Details">
 
             <div class="flex flex-wrap">
                 <div class="w-[45%] mr-auto">
@@ -70,7 +70,7 @@ export default defineComponent({
 
         </FormSectionComponent>
 
-        <FormSectionComponent title="Ticket Package" class="mt-20">
+        <FormSectionComponent note="Add proper sufficient and truthfull that if not misleading to customers" title="Ticket Package" class="mt-20">
 
             <TicketPackagesInputComponent :field="form.packages"/>
 

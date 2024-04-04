@@ -32,7 +32,7 @@
         </div>
         
         <div v-if="page === Pages.shipping" class="my-24">
-            <FormSectionComponentVue title="Shipping Information">
+            <FormSectionComponentVue note="Add proper sufficient and truthfull that if not misleading." title="Shipping Information">
                 <div class="flex flex-wrap">
                     <div class="w-[45%] mr-auto">
                         <LabeledFieldComponent label="Drop-off Location">

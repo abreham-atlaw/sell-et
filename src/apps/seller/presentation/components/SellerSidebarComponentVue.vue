@@ -34,12 +34,12 @@ export default defineComponent({
             collapsed: false, // Add this line
             currentPage: this.$router.currentRoute.value.path,
             menuItems: [
-                { label: 'Dashboard', icon: 'fas fa-chart-pie', link: '/seller/dashboard' }, // Lighter dashboard icon
-                { label: 'Publish', icon: 'far fa-plus-square', link: '/seller/publish' }, // Lighter publish icon
-                { label: 'Sales', icon: 'far fa-chart-bar', link: '/seller/sales' }, // Lighter sales chart icon
-                { label: 'Customers', icon: 'far fa-user-circle', link: '/seller/customers' }, // Lighter customers icon
-                { label: 'Orders', icon: 'fas fa-receipt', link: '/seller/orders' }, // Lighter orders icon
-                { label: "Logistics", icon: 'fa-solid fa-truck-fast', link: '/admin-logistics.html'}
+                { label: 'Dashboard', icon: 'bi bi-square-half', link: '/seller/dashboard' }, // Lighter dashboard icon
+                { label: 'Publish', icon: 'bi bi-plus-circle-dotted', link: '/seller/publish' }, // Lighter publish icon
+                { label: 'Sales', icon: 'bi bi-currency-exchange', link: '/seller/sales' }, // Lighter sales chart icon
+                { label: 'Customers', icon: 'bi bi-person-circle', link: '/seller/customers' }, // Lighter customers icon
+                { label: 'Orders', icon: 'bi bi-bag-fill', link: '/seller/orders' }, // Lighter orders icon
+                { label: "Logistics", icon: 'bi bi-box-seam-fill', link: '/admin-logistics.html'}
                 ],
                 // menuItems2: [
                 // { label: 'Settings', icon: 'fas fa-tools', link: 'seller//settings' }, // Lighter settings icon
